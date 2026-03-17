@@ -1,0 +1,50 @@
+/* Deals Page Additional Styles */
+.deals-header .deals-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.deals-header p {
+  color: #ef4444; /* red for urgency */
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.deal-card-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ef4444;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 800;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Modifying the ProductCard styles just for deals to show original price */
+.deal-card-wrapper .product-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deal-card-wrapper .product-price::after {
+  content: '₦' attr(data-original);
+  text-decoration: line-through;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
